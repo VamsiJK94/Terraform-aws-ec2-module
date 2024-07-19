@@ -23,7 +23,7 @@ variable "instance_type" {
 }
 
 variable "cpu_core_count" {
-  description = "Sets the number of CPU cores for an instance." # This option is only supported on creation of instance type that support CPU Options https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html#cpu-options-supported-instances-values
+  description = "Sets the number of CPU cores for an instance."
   type        = number
   default     = null
 }
@@ -128,8 +128,6 @@ variable "ebs_kms_key" {
 
 variable "ebs_block_device" {
   description = "Additional EBS block devices to attach to the instance"
-  # type        = object
-  # type        = list(map(string))
   default     = {}
 }
 

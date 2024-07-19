@@ -22,6 +22,7 @@ resource "aws_instance" "this" {
 
   ebs_optimized = var.ebs_optimized
   
+  #Configuration block to customize details about the root block device of the instance.
   root_block_device {
     volume_size           = try(var.root_block_device.volume_size, null)
     volume_type           = try(var.root_block_device.volume_type, null)
